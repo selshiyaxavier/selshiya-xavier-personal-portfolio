@@ -85,52 +85,54 @@ export default function Navbar() {
     };
 
     return (
-        <nav
-            className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-                scrolled ? "glass border-glass-border py-4" : "bg-transparent py-6"
-            )}
-        >
-            <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold tracking-tighter hover:text-neon-pink transition-colors">
-                    VJ <span className="text-neon-pink">Selshiya</span>
-                </Link>
+        <>
+            <nav
+                className={cn(
+                    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
+                    scrolled ? "glass border-glass-border py-4" : "bg-transparent py-6"
+                )}
+            >
+                <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+                    <Link href="/" className="text-2xl font-bold tracking-tighter hover:text-neon-pink transition-colors">
+                        VJ <span className="text-neon-pink">Selshiya</span>
+                    </Link>
 
-                {/* Desktop Menu */}
-                <div className="hidden md:flex gap-2 bg-white/5 backdrop-blur-md p-1 rounded-full border border-white/10">
-                    {navLinks.map((link) => {
-                        const isActive = activeSection === link.href.substring(1);
-                        return (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                onClick={(e) => handleNavClick(e, link.href)}
-                                className={cn(
-                                    "relative px-6 py-2 text-sm font-medium transition-colors rounded-full",
-                                    isActive ? "text-white" : "text-gray-400 hover:text-white"
-                                )}
-                            >
-                                {isActive && (
-                                    <motion.span
-                                        layoutId="activeSection"
-                                        className="absolute inset-0 bg-gradient-to-r from-neon-pink/20 to-neon-purple/20 rounded-full border border-white/10"
-                                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                                    />
-                                )}
-                                <span className="relative z-10 tracking-wide">{link.name.toUpperCase()}</span>
-                            </Link>
-                        );
-                    })}
+                    {/* Desktop Menu */}
+                    <div className="hidden md:flex gap-2 bg-white/5 backdrop-blur-md p-1 rounded-full border border-white/10">
+                        {navLinks.map((link) => {
+                            const isActive = activeSection === link.href.substring(1);
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={(e) => handleNavClick(e, link.href)}
+                                    className={cn(
+                                        "relative px-6 py-2 text-sm font-medium transition-colors rounded-full",
+                                        isActive ? "text-white" : "text-gray-400 hover:text-white"
+                                    )}
+                                >
+                                    {isActive && (
+                                        <motion.span
+                                            layoutId="activeSection"
+                                            className="absolute inset-0 bg-gradient-to-r from-neon-pink/20 to-neon-purple/20 rounded-full border border-white/10"
+                                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                        />
+                                    )}
+                                    <span className="relative z-10 tracking-wide">{link.name.toUpperCase()}</span>
+                                </Link>
+                            );
+                        })}
+                    </div>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="md:hidden text-white hover:text-neon-pink transition-colors"
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        {isOpen ? <X size={28} /> : <Menu size={28} />}
+                    </button>
                 </div>
-
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-white hover:text-neon-pink transition-colors"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    {isOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
-            </div>
+            </nav>
 
             {/* Mobile Menu Overlay */}
             <AnimatePresence>
@@ -140,7 +142,7 @@ export default function Navbar() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 bg-zinc-950 z-[100] flex flex-col md:hidden"
+                        className="fixed inset-0 bg-black z-[9999] flex flex-col md:hidden"
                     >
                         {/* Mobile Header */}
                         <div className="flex justify-between items-center p-6 border-b border-white/5">
@@ -200,6 +202,6 @@ export default function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>
+        </>
     );
 }
