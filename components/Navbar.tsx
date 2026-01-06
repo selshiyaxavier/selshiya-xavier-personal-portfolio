@@ -140,7 +140,7 @@ export default function Navbar() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 bg-gradient-to-b from-zinc-950 to-black z-50 flex flex-col md:hidden"
+                        className="fixed inset-0 bg-zinc-950 z-[100] flex flex-col md:hidden"
                     >
                         {/* Mobile Header */}
                         <div className="flex justify-between items-center p-6 border-b border-white/5">
@@ -168,7 +168,7 @@ export default function Navbar() {
                                     <Link
                                         href={link.href}
                                         onClick={(e) => handleNavClick(e, link.href)}
-                                        className="text-3xl font-bold text-white/80 hover:text-neon-pink transition-colors tracking-wide"
+                                        className="text-3xl font-bold text-white hover:text-neon-pink transition-colors tracking-wide"
                                     >
                                         {link.name}
                                     </Link>
@@ -177,7 +177,7 @@ export default function Navbar() {
                         </div>
 
                         {/* Mobile Footer */}
-                        <div className="p-8 border-t border-white/5 bg-white/5 backdrop-blur-lg">
+                        <div className="p-8 border-t border-white/5">
                             <div className="flex flex-col gap-6">
                                 <Link
                                     href="#contact"
