@@ -1,0 +1,29 @@
+[
+    {
+        "type": "work",
+        "title": "VJ & Social Media Executive",
+        "org": "Nuke It",
+        "date": "December 2025 - Present",
+        "desc": [
+            "Act as the primary point of coordination for client requirements, managing content calendars and ensuring timely delivery of video assets aligned with platform-specific posting schedules.",
+            "Plan and assign video editing workflows by coordinating with editors, tracking production progress, and ensuring deliverables meet both creative standards and client deadlines.",
+            "Develop engaging, platform-optimized captions and video descriptions that reflect brand voice, improve reach, and support audience engagement goals.",
+            "Manage end-to-end publishing by scheduling and posting video content across social media platforms, ensuring consistency, accuracy, and adherence to campaign timelines."
+        ],
+        "iconType": "briefcase"
+    },
+    {
+        "type": "work",
+        "title": "VJ & Content Writer",
+        "org": "Nicola Foundation",
+        "date": "June 2025 - December 2025",
+        "desc": [
+            "Hosted events and interviews with diverse audience engagement.",
+            "Created emotionally engaging and informative scripts on trending topics.",
+            "Wrote for YouTube videos, reels, and Instagram posts with audience focus.",
+            "Maintained tone and timing in line with show format.",
+            "Collaborated with editors to align voice and visuals."
+        ],
+        "iconType": "briefcase"
+    }
+]
