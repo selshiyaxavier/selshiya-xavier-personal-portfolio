@@ -29,8 +29,7 @@ const images = [
     "/images/about-me-2.jpg",
     "/images/about-me-3.jpg",
     "/images/IMG_6839.jpeg",
-    "/images/IMG_6836.jpeg",
-    "/images/IMG_6842.jpeg"
+    "/images/IMG_6836.jpeg"
 ];
 
 export default function AboutStats() {
