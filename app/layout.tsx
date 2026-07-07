@@ -6,7 +6,7 @@ import {
     Instrument_Serif,
     Anek_Tamil,
 } from "next/font/google";
-import "../globals.css";
+import "./globals.css";
 import "./onair.css";
 import ImageProtection from "@/components/ImageProtection";
 
@@ -49,7 +49,7 @@ const anekTamil = Anek_Tamil({
 });
 
 export const metadata: Metadata = {
-    title: "VJ Selshiya | ON AIR",
+    title: "VJ Selshiya | Portfolio",
     description:
         "VJ Selshiya — Video Jockey, RJ, Voice Over Artist and Storyteller. Connecting souls through Voice, Video & Words.",
 };
@@ -62,7 +62,7 @@ const fontVars = [
     anekTamil.variable,
 ].join(" ");
 
-export default function OnAirLayout({
+export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
