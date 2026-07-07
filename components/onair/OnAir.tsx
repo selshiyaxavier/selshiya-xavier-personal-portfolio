@@ -116,13 +116,14 @@ export default function OnAir() {
             {/* vignette */}
             <div
                 aria-hidden
+                className="oa-vignette"
                 style={{
                     position: "fixed",
                     inset: 0,
                     zIndex: 9997,
                     pointerEvents: "none",
                     background:
-                        "radial-gradient(120% 90% at 50% 0%, transparent 55%, rgba(0,0,0,0.55) 100%)",
+                        "radial-gradient(125% 95% at 50% 0%, transparent 62%, rgba(0,0,0,0.38) 100%)",
                 }}
             />
 
