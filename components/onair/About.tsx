@@ -167,6 +167,7 @@ export default function About() {
 
                     {/* stats */}
                     <div
+                        className="oa-about-stats"
                         style={{
                             display: "grid",
                             gridTemplateColumns: "repeat(3,1fr)",

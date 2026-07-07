@@ -72,7 +72,7 @@ export default function Feed() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-[22px] sm:grid-cols-2 min-[900px]:grid-cols-3">
+                <div className="grid grid-cols-2 gap-[14px] sm:gap-[22px] min-[900px]:grid-cols-3">
                     {shown.map((reel) => (
                         <a
                             key={reel.url}

@@ -42,6 +42,7 @@ export default function Hero() {
     return (
         <section
             id="home"
+            className="oa-hero"
             style={{
                 position: "relative",
                 minHeight: "100vh",
@@ -109,7 +110,7 @@ export default function Hero() {
             />
 
             <div
-                className="grid grid-cols-1 items-end gap-8 min-[900px]:grid-cols-[1.15fr_0.85fr]"
+                className="oa-hero-grid grid grid-cols-1 items-end gap-8 min-[900px]:grid-cols-[1.15fr_0.85fr]"
                 style={{
                     position: "relative",
                     zIndex: 5,
@@ -120,7 +121,7 @@ export default function Hero() {
                 }}
             >
                 {/* LEFT: text */}
-                <div style={{ paddingBottom: "4vh" }}>
+                <div className="oa-hero-text" style={{ paddingBottom: "4vh" }}>
                     <div
                         style={{
                             display: "flex",
@@ -250,6 +251,7 @@ export default function Hero() {
 
                 {/* RIGHT: portrait */}
                 <div
+                    className="oa-hero-portrait"
                     style={{
                         position: "relative",
                         display: "flex",
@@ -274,6 +276,7 @@ export default function Hero() {
                     />
                     <div
                         aria-hidden
+                        className="oa-hero-vtamil"
                         style={{
                             position: "absolute",
                             left: "-6%",
@@ -291,6 +294,7 @@ export default function Hero() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         data-parallax="0.07"
+                        className="oa-hero-img"
                         src="/images/landing-image.png"
                         alt="VJ Selshiya"
                         loading="eager"
@@ -370,6 +374,7 @@ export default function Hero() {
                     </div>
                     {/* lower third tag */}
                     <div
+                        className="oa-hero-lowerthird"
                         style={{
                             position: "absolute",
                             bottom: "14%",
@@ -418,6 +423,7 @@ export default function Hero() {
 
             {/* scroll indicator */}
             <div
+                className="oa-scroll"
                 style={{
                     position: "absolute",
                     bottom: 26,
