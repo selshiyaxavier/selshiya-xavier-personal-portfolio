@@ -117,15 +117,6 @@
     .oa-scroll {
         display: none !important;
     }
-    /* The portrait sits at the bottom of the viewport on mobile, right under
-       the vignette's darkest point — lighten it so the subject stays visible. */
-    .oa-vignette {
-        background: radial-gradient(
-            150% 80% at 50% 0%,
-            transparent 74%,
-            rgba(0, 0, 0, 0.2) 100%
-        ) !important;
-    }
 }
 
 @media (max-width: 480px) {

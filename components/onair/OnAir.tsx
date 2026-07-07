@@ -113,20 +113,6 @@ export default function OnAir() {
                     animation: "grainShift 8s steps(5) infinite",
                 }}
             />
-            {/* vignette */}
-            <div
-                aria-hidden
-                className="oa-vignette"
-                style={{
-                    position: "fixed",
-                    inset: 0,
-                    zIndex: 9997,
-                    pointerEvents: "none",
-                    background:
-                        "radial-gradient(125% 95% at 50% 0%, transparent 62%, rgba(0,0,0,0.38) 100%)",
-                }}
-            />
-
             <Header />
             <Hero />
             <Marquee words={ROLE_WORDS} variant="solid" durationSec={26} />
