@@ -82,29 +82,43 @@
    !important where they must override an inline value. Below 900px the layout
    grids collapse to a single column, so hero decorations need re-anchoring. */
 @media (max-width: 899px) {
-    /* Hero: drop the forced 100vh so content flows without a big empty gap */
+    /* Hero: drop the forced 100vh and tighten vertical rhythm so the full
+       portrait lifts into the first view instead of sitting below the fold. */
     .oa-hero {
         min-height: auto !important;
         align-items: flex-start !important;
-        padding-top: 100px !important;
-        padding-bottom: 44px !important;
+        padding-top: 88px !important;
+        padding-bottom: 28px !important;
     }
     .oa-hero-grid {
         padding-bottom: 0 !important;
-        gap: 28px !important;
+        gap: 16px !important;
     }
     .oa-hero-text {
         padding-bottom: 0 !important;
     }
-    /* Constrain the portrait column and center it so the badge + lower-third
+    /* Compress the text block's internal spacing on phones. */
+    .oa-hero-eyebrow {
+        margin-bottom: 16px !important;
+    }
+    .oa-hero-typing {
+        margin-top: 14px !important;
+    }
+    .oa-hero-quote {
+        margin-top: 16px !important;
+    }
+    .oa-hero-cta {
+        margin-top: 22px !important;
+    }
+    /* Constrain the portrait column and center it so the bubble + lower-third
        hug the image instead of clipping at the screen edges. */
     .oa-hero-portrait {
         max-width: 380px;
         width: 100%;
-        margin: 6px auto 0;
+        margin: 2px auto 0;
     }
     .oa-hero-img {
-        width: min(72vw, 300px) !important;
+        width: min(66vw, 280px) !important;
     }
     .oa-hero-lowerthird {
         left: 0 !important;
@@ -126,6 +140,6 @@
     }
     /* Ease the portrait a touch smaller on the smallest screens. */
     .oa-hero-img {
-        width: min(78vw, 260px) !important;
+        width: min(70vw, 240px) !important;
     }
 }

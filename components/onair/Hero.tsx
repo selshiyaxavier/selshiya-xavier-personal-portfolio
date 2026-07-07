@@ -123,6 +123,7 @@ export default function Hero() {
                 {/* LEFT: text */}
                 <div className="oa-hero-text" style={{ paddingBottom: "4vh" }}>
                     <div
+                        className="oa-hero-eyebrow"
                         style={{
                             display: "flex",
                             alignItems: "center",
@@ -170,6 +171,7 @@ export default function Hero() {
                         SELSHIYA
                     </h1>
                     <div
+                        className="oa-hero-typing"
                         style={{
                             marginTop: 22,
                             fontFamily: FONT.grotesk,
@@ -190,6 +192,7 @@ export default function Hero() {
                         </span>
                     </div>
                     <p
+                        className="oa-hero-quote"
                         style={{
                             margin: "26px 0 0",
                             maxWidth: 440,
@@ -203,6 +206,7 @@ export default function Hero() {
                         &ldquo;Connecting souls through Voice, Video &amp; Words.&rdquo;
                     </p>
                     <div
+                        className="oa-hero-cta"
                         style={{
                             display: "flex",
                             flexWrap: "wrap",
@@ -307,71 +311,75 @@ export default function Hero() {
                             filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.55))",
                         }}
                     />
-                    {/* rotating badge */}
-                    <div
+                    {/* speech bubble — she points at it */}
+                    <a
+                        href="#contact"
+                        aria-label="Let's collaborate — get in touch"
+                        className="oa-hero-bubble"
                         style={{
                             position: "absolute",
-                            top: "2%",
-                            right: "0%",
-                            zIndex: 4,
-                            width: "clamp(96px,10vw,132px)",
-                            height: "clamp(96px,10vw,132px)",
+                            top: "-1%",
+                            right: "-3%",
+                            zIndex: 6,
+                            background: "#f4ebdd",
+                            color: "#14100d",
+                            borderRadius: "16px 16px 16px 4px",
+                            padding: "12px 15px",
+                            maxWidth: "min(60vw, 210px)",
+                            boxShadow: "0 16px 36px rgba(0,0,0,0.45)",
                             animation: "floatY 6s ease-in-out infinite",
                         }}
                     >
-                        <svg
-                            viewBox="0 0 200 200"
-                            style={{
-                                width: "100%",
-                                height: "100%",
-                                animation: "spinSlow 14s linear infinite",
-                            }}
-                        >
-                            <defs>
-                                <path
-                                    id="badgeCircle"
-                                    d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"
-                                />
-                            </defs>
-                            <text
-                                style={{
-                                    fontFamily: FONT.mono,
-                                    fontSize: 15,
-                                    letterSpacing: "5.5px",
-                                    fill: "#f4ebdd",
-                                }}
-                            >
-                                <textPath href="#badgeCircle">
-                                    AVAILABLE FOR BOOKINGS ✦ HOST + VJ ✦{" "}
-                                </textPath>
-                            </text>
-                        </svg>
-                        <div
-                            style={{
-                                position: "absolute",
-                                inset: 0,
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                            }}
-                        >
+                        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                             <span
                                 style={{
-                                    width: 46,
-                                    height: 46,
+                                    width: 8,
+                                    height: 8,
                                     borderRadius: "50%",
                                     background: "var(--accent)",
-                                    color: "#14100d",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    fontSize: 16,
+                                    boxShadow: "0 0 10px var(--accent)",
+                                    animation: "pulseDot 1.6s ease-in-out infinite",
+                                    flexShrink: 0,
+                                }}
+                            />
+                            <span
+                                style={{
+                                    fontFamily: FONT.tamil,
+                                    fontWeight: 800,
+                                    fontSize: "clamp(18px,4.4vw,24px)",
+                                    lineHeight: 1,
                                 }}
                             >
-                                ▶
+                                வணக்கம்! 👋
                             </span>
                         </div>
-                    </div>
+                        <div
+                            style={{
+                                marginTop: 6,
+                                fontFamily: FONT.archivo,
+                                fontWeight: 800,
+                                fontSize: "clamp(12px,3.2vw,15px)",
+                                letterSpacing: ".01em",
+                            }}
+                        >
+                            Let&apos;s go live{" "}
+                            <span style={{ color: "var(--accent)" }}>→</span>
+                        </div>
+                        {/* tail pointing down toward her */}
+                        <span
+                            aria-hidden
+                            style={{
+                                position: "absolute",
+                                bottom: -8,
+                                left: 20,
+                                width: 0,
+                                height: 0,
+                                borderLeft: "9px solid transparent",
+                                borderRight: "9px solid transparent",
+                                borderTop: "9px solid #f4ebdd",
+                            }}
+                        />
+                    </a>
                     {/* lower third tag */}
                     <div
                         className="oa-hero-lowerthird"
