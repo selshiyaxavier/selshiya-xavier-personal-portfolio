@@ -133,6 +133,19 @@
     }
 }
 
+/* Desktop: the portrait column is as tall as the giant hero text, so anchoring
+   the bubble from the top floats it far above the subject. Anchor from the
+   bottom (= image bottom) and scale with the image so the tail lands on her
+   fingertip (~62% across, ~29% down in the photo). */
+@media (min-width: 900px) {
+    .oa-hero-bubble {
+        top: auto !important;
+        right: auto !important;
+        bottom: min(31vw, 420px) !important;
+        left: 56% !important;
+    }
+}
+
 @media (max-width: 480px) {
     /* Three stat cards are too tight on a phone — stack them. */
     .oa-about-stats {
