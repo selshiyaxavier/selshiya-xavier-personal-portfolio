@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
-import "./globals.css";
+import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImageProtection from "@/components/ImageProtection";
@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 });
 
 const eyesome = localFont({
-    src: "./fonts/EyesomeScript.otf",
+    src: "../fonts/EyesomeScript.otf",
     variable: "--font-eyesome",
     display: "swap",
 });
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: "Portfolio of VJ Selshiya - Video Jockey, RJ, Voice Over Artist, and Storyteller.",
 };
 
-export default function RootLayout({
+export default function SiteLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
