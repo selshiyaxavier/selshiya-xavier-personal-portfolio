@@ -158,6 +158,7 @@ export default function Hero() {
                         HELLO, I AM
                     </div>
                     <h1
+                        className="oa-flicker"
                         style={{
                             margin: 0,
                             fontFamily: FONT.archivo,
@@ -325,7 +326,7 @@ export default function Hero() {
                             color: "#14100d",
                             borderRadius: "16px 16px 16px 4px",
                             padding: "12px 15px",
-                            maxWidth: "min(60vw, 210px)",
+                            maxWidth: "min(80vw, 300px)",
                             boxShadow: "0 16px 36px rgba(0,0,0,0.45)",
                             animation: "floatY 6s ease-in-out infinite",
                         }}
@@ -348,6 +349,7 @@ export default function Hero() {
                                     fontWeight: 800,
                                     fontSize: "clamp(18px,4.4vw,24px)",
                                     lineHeight: 1,
+                                    whiteSpace: "nowrap",
                                 }}
                             >
                                 வணக்கம்! 👋

@@ -57,6 +57,31 @@
     80% { transform: translate(5%, 2%); }
 }
 
+/* Broadcast sign "locking on" — flickers in once on load, then holds solid. */
+@keyframes flickerReveal {
+    0%   { opacity: 0; }
+    8%   { opacity: 0.75; }
+    9%   { opacity: 0.15; }
+    12%  { opacity: 1; }
+    14%  { opacity: 0.3; }
+    16%  { opacity: 1; }
+    22%  { opacity: 0.55; }
+    24%  { opacity: 1; }
+    54%  { opacity: 1; }
+    56%  { opacity: 0.7; }
+    58%  { opacity: 1; }
+    100% { opacity: 1; }
+}
+.oa-flicker {
+    animation: flickerReveal 1.6s ease-in-out both;
+    will-change: opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+    .oa-flicker {
+        animation: none;
+    }
+}
+
 /* Feed card hover (image zoom + brighten) */
 .oa-feed-card img {
     opacity: .82;
