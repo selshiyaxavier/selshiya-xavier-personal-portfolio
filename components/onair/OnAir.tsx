@@ -23,7 +23,7 @@ const PRESS_WORDS = [
     "RAJ TELEVISION NETWORK",
     "STEP 'N' WALK",
     "NICOLA FOUNDATION",
-    "NUKE MARKETING",
+    "NUKE IT MARKETING",
 ];
 
 export default function OnAir() {

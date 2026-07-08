@@ -196,6 +196,19 @@ export default function Contact({ pressWords }: { pressWords: string[] }) {
                                 <CircleIcon solid>IG</CircleIcon>
                                 <span style={{ fontSize: 18 }}>@vj_selshiya</span>
                             </a>
+                            <a
+                                href="/VJ-Selshiya-CV.pdf"
+                                download="VJ-Selshiya-CV.pdf"
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: 16,
+                                    color: "#e6dccb",
+                                }}
+                            >
+                                <CircleIcon>⤓</CircleIcon>
+                                <span style={{ fontSize: 18 }}>Download my CV</span>
+                            </a>
                         </div>
                     </div>
 

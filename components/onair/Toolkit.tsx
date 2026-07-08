@@ -15,10 +15,35 @@ const HIGHLIGHTS: {
     body: React.ReactNode;
 }[] = [
     {
-        headline: "132K",
+        headline: "STEP 'N' WALK",
         headlineColor: "var(--accent)",
         big: true,
         accent: true,
+        body: (
+            <>
+                Hosted the dance reality show{" "}
+                <strong style={{ color: "#fff" }}>STEP &lsquo;N&rsquo; WALK on Raj Television Network</strong>,
+                engaging live audiences and coordinating on-stage interactions with contestants
+                and judges.
+            </>
+        ),
+    },
+    {
+        headline: "6.5K → 10K+",
+        headlineColor: "var(--amber)",
+        big: true,
+        body: (
+            <>
+                Grew Mr. Chandru&apos;s (Co-founder, Mr. Golisoda) Instagram following from{" "}
+                <strong style={{ color: "#fff" }}>6.5K to 10K+ in just 28 days</strong> through
+                strategic content planning and organic growth.
+            </>
+        ),
+    },
+    {
+        headline: "132K",
+        headlineColor: "var(--accent)",
+        big: true,
         body: (
             <>
                 Created viral Instagram Reel content at Nicola Foundation that crossed{" "}

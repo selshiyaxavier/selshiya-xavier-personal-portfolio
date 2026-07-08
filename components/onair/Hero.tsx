@@ -251,6 +251,24 @@ export default function Hero() {
                         >
                             Book the talent
                         </a>
+                        <a
+                            href="/VJ-Selshiya-CV.pdf"
+                            download="VJ-Selshiya-CV.pdf"
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "center",
+                                gap: 10,
+                                padding: "16px 30px",
+                                borderRadius: 999,
+                                border: "1px solid var(--amber)",
+                                color: "var(--amber)",
+                                fontFamily: FONT.archivo,
+                                fontWeight: 700,
+                                fontSize: 15,
+                            }}
+                        >
+                            Download CV ↓
+                        </a>
                     </div>
                 </div>
 

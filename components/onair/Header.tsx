@@ -3,20 +3,22 @@
 import { useEffect, useRef, useState } from "react";
 import { FONT } from "./tokens";
 
-const NAV = [
+const NAV: { label: string; href: string; download?: boolean }[] = [
     { label: "HOME", href: "#home" },
     { label: "ABOUT", href: "#about" },
     { label: "RUNDOWN", href: "#experience" },
     { label: "FEED", href: "#portfolio" },
     { label: "CONTACT", href: "#contact" },
+    { label: "CV", href: "/VJ-Selshiya-CV.pdf", download: true },
 ];
 
-const MOBILE_NAV = [
+const MOBILE_NAV: { label: string; href: string; accent: boolean; download?: boolean }[] = [
     { label: "Home", href: "#home", accent: false },
     { label: "About", href: "#about", accent: false },
     { label: "Rundown", href: "#experience", accent: false },
     { label: "Feed", href: "#portfolio", accent: false },
     { label: "Contact", href: "#contact", accent: true },
+    { label: "Download CV", href: "/VJ-Selshiya-CV.pdf", accent: false, download: true },
 ];
 
 export default function Header() {
@@ -116,13 +118,14 @@ export default function Header() {
                         <a
                             key={item.href}
                             href={item.href}
+                            {...(item.download ? { download: "VJ-Selshiya-CV.pdf" } : {})}
                             style={{
                                 padding: "9px 16px",
                                 borderRadius: 999,
                                 fontFamily: FONT.mono,
                                 fontSize: 12,
                                 letterSpacing: ".14em",
-                                color: i === 0 ? "#f4ebdd" : "#a89a89",
+                                color: i === 0 ? "#f4ebdd" : item.download ? "var(--amber)" : "#a89a89",
                             }}
                         >
                             {item.label}
@@ -250,12 +253,17 @@ export default function Header() {
                             <a
                                 key={item.href}
                                 href={item.href}
+                                {...(item.download ? { download: "VJ-Selshiya-CV.pdf" } : {})}
                                 onClick={() => setMobileOpen(false)}
                                 style={{
                                     fontFamily: FONT.archivo,
                                     fontWeight: 800,
-                                    fontSize: 40,
-                                    color: item.accent ? "var(--accent)" : "#f4ebdd",
+                                    fontSize: item.download ? 28 : 40,
+                                    color: item.accent
+                                        ? "var(--accent)"
+                                        : item.download
+                                          ? "var(--amber)"
+                                          : "#f4ebdd",
                                 }}
                             >
                                 {item.label}
